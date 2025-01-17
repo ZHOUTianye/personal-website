@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<p>{{showInfo}}</p>
+		</div>
+		<script src="../vue.esm-browser.js"></script>
+		<script>
+			Vue.createApp({
+				data(){
+					return {
+						t1:'hello',
+						t2:'world'
+					}
+				},
+				computed : {
+					showInfo(){
+						return this.t1+this.t2;
+					}
+				}
+			}).mount('#app')
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,8 @@
+
+cd
+Users/tianye/
+该文件所在文件夹
+Documents/HBuilderProjects/复古网页1995/node和vue测试内容
+test.js
+Documents/HBuilderProjects/复古网页1995/node和vue测试内容/test.js
+

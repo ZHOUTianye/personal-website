@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3881036 */
+  src: url('iconfont.woff2?t=1675603667270') format('woff2'),
+       url('iconfont.woff?t=1675603667270') format('woff'),
+       url('iconfont.ttf?t=1675603667270') format('truetype'),
+	   url('iconfont2.ttf?t=1705726518823') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 18px;
+  font-style: normal;
+  color: #dbc081;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right:3px ;
+  position: relative;
+  top:1px;
+}
+
+.icon-phone-fill:before {
+  content: "\e86d";
+}
+
+.icon-mail-fill:before {
+  content: "\e86f";
+}
+
+.icon-QQ:before {
+  content: "\e882";
+}
+
+.icon-zhihu:before {
+  content: "\e87c";
+}
+
+.icon-linkedin:before {
+  content: "\e87d";
+}
+
+.icon-facebook:before {
+  content: "\e87e";
+}
+
+.icon-instagram:before {
+  content: "\e87f";
+}
+
+.icon-wechat-fill:before {
+  content: "\e883";
+}
+
+.icon-whatsapp:before {
+  content: "\e8ea";
+}
+
+.icon-chanpin:before {
+  content: "\e601";
+}
+
+.icon-wenjian:before {
+  content: "\e760";
+}
+
+.icon-lianjie:before {
+  content: "\e63a";
+}
+
+.icon-liuyanban-05:before {
+  content: "\e630";
+}
+
+

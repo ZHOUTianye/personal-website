@@ -1,0 +1,86 @@
+Update 更新和部署
+宝塔登陆地址
+https://47.242.73.60:20727/375fd574
+tianyzhou9
+ZTYzty0522
+
+cdn update text
+设置更新方法为目录。
+http://tianyezhou.com/
+http://www.tianyezhou.com/
+https://tianyezhou.com/
+https://www.tianyezhou.com/
+
+不使用url的方法。
+
+http://tianyezhou.com/index.html
+http://tianyezhou.com/new.css
+http://tianyezhou.com/clock.css
+http://tianyezhou.com/swiper.css
+http://tianyezhou.com/clock.js
+http://tianyezhou.com/pageview.js
+http://tianyezhou.com/swiper.js
+http://tianyezhou.com/swiper.min.js
+http://tianyezhou.com/jquery.min.js
+http://tianyezhou.com/logo2.png
+http://tianyezhou.com/font/Tahu!.ttf
+http://tianyezhou.com/font/得意黑 斜体.ttf
+http://tianyezhou.com/font/Adobe Garamond LT Regular.ttf
+http://tianyezhou.com/font/Adobe-Garamond-LT-Regular.ttf
+http://tianyezhou.com/font/berling.ttf
+http://tianyezhou.com/font/Coves Light.otf
+http://tianyezhou.com/font/FuturaStd-Light.otf
+http://tianyezhou.com/font/iconfont.css
+http://tianyezhou.com/font/iconfont.ttf
+http://tianyezhou.com/font/iconfont.woff
+http://tianyezhou.com/font/iconfont.woff2
+http://tianyezhou.com/font/Moon.otf
+http://tianyezhou.com/font/NeonOne.otf
+http://tianyezhou.com/font/re1.otf
+http://tianyezhou.com/font/re2.otf
+http://tianyezhou.com/font/re3.otf
+http://tianyezhou.com/font/SmileySans-Oblique.ttf
+http://tianyezhou.com/font/SourceHanSerifSC-ExtraLight.otf
+http://tianyezhou.com/font/font v2/iconfont.css
+http://tianyezhou.com/font/font v2/iconfont.js
+http://tianyezhou.com/font/font v2/iconfont.json
+http://tianyezhou.com/font/font v2/iconfont.ttf
+http://tianyezhou.com/img/icon.ico
+http://tianyezhou.com/img/demo1.jpg
+http://tianyezhou.com/img/demo2.jpg
+http://tianyezhou.com/img/demo3.jpg
+http://tianyezhou.com/img/demo-selfphoto.jpg
+http://tianyezhou.com/img/logo.jpg
+http://tianyezhou.com/img/motto2.png
+http://tianyezhou.com/img/motto-en.png
+http://tianyezhou.com/img/photowall/1.jpg
+http://tianyezhou.com/img/photowall/2.jpg
+http://tianyezhou.com/img/photowall/3.jpg
+http://tianyezhou.com/img/photowall/4.jpg
+http://tianyezhou.com/img/photowall/5.jpg
+http://tianyezhou.com/img/photowall/6.jpg
+http://tianyezhou.com/img/photowall/7.jpg
+http://tianyezhou.com/img/photowall/8.jpg
+http://tianyezhou.com/img/photowall/9.jpg
+http://tianyezhou.com/img/photowall/10.jpg
+http://tianyezhou.com/img/photowall/11.jpg
+http://tianyezhou.com/img/photowall/12.jpg
+http://tianyezhou.com/img/photowall/13.jpg
+http://tianyezhou.com/img/photowall/14.jpg
+http://tianyezhou.com/img/photowall/15.jpg
+http://tianyezhou.com/img/photowall/16.jpg
+http://tianyezhou.com/img/photowall/17.jpg
+http://tianyezhou.com/img/photowall/18.jpg
+http://tianyezhou.com/img/photowall/19.jpg
+http://tianyezhou.com/img/photowall/20.jpg
+http://tianyezhou.com/img/photowall/21.jpg
+http://tianyezhou.com/img/photowall/22.jpg
+http://tianyezhou.com/img/photowall/23.jpg
+http://tianyezhou.com/img/photowall/24.jpg
+http://tianyezhou.com/img/photowall/25.jpg
+http://tianyezhou.com/img/photowall/26.jpg
+http://tianyezhou.com/img/photowall/27.jpg
+http://tianyezhou.com/img/photowall/28.jpg
+http://tianyezhou.com/img/photowall/29.jpg
+http://tianyezhou.com/img/photowall/30.jpg
+

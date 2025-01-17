@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Console log on load</title>
+		<style>
+			#hello{
+				opacity: 1;
+				height: 1;
+				transition: 0.5s;
+			}
+			#hello.hidden{
+				opacity: 0;
+				height: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Javascript 事件监听器</h1>
+		<p id='hello'>afhdsaj</p>
+		<button onclick="document.getElementById('hello').innerHTML='Hello JavaScript' " >
+			click me!
+		</button>
+		<button id="funbutton"> fun button</button>
+		<script>
+			console.log("page has loaded")
+			document.getElementById('funbutton').addEventListener('click',function(){
+				document.getElementById('hello').classList.toggle('hidden')
+			})
+		</script>
+	</body>
+</html>

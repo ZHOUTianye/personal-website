@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text with Titles, Images and Navigation</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+        }
+        #content {
+            width: 75%;
+            padding: 20px;
+        }
+        #navbar {
+            width: 25%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            padding: 20px;
+        }
+        #navbar a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        h2 {
+            color: #2C3E50;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 右侧导航栏 -->
+        <div id="navbar">
+            <h3>导航</h3>
+            <a v-for="(item, index) in contents" :key="index" v-if="item.type === 'title'" :href="'#title' + index">
+                {{ item.data }}
+            </a>
+        </div>
+
+        <!-- 主要内容区域 -->
+        <div id="content">
+            <div v-for="(content, index) in contents" :key="index">
+                <!-- 渲染标题 -->
+                <h2 v-if="content.type === 'title'" :id="'title' + index">{{ content.data }}</h2>
+                <!-- 渲染段落 -->
+                <p v-else-if="content.type === 'text'">{{ content.data }}</p>
+                <!-- 渲染图片 -->
+                <img v-else-if="content.type === 'image'" :src="content.data" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                // 长文本，自动分段和插入图片
+                longText: `
+# 小标题1
+这是第一段内容。段落自动生成，可以放一些介绍。
+# 小标题2\n这是第二段内容，插入图片。\n\n![图片]\n再写一些内容，描述一下图片。\n\n
+# 小标题3\n这是第三段内容，再插入一张图片。\n\n![图片]\n最后的内容。`,
+                // 图片 URL 列表，按顺序使用
+                imageUrls: [
+                    './logo2.png', // 第一张图片
+                    './img/404.png'  // 第二张图片
+                ],
+                contents: [],
+                imageIndex: 0 // 用于追踪当前图片的索引
+            },
+            mounted() {
+                this.processText();
+            },
+            methods: {
+                processText() {
+                    // 将长文本处理为段落、小标题和图片
+                    const lines = this.longText.split('\n');
+                    lines.forEach(line => {
+                        // 去掉两端空格，避免换行符或空格影响判断
+                        line = line.trim();
+
+                        if (line.startsWith('# ')) {
+                            // 处理标题
+                            this.contents.push({ type: 'title', data: line.replace('# ', '') });
+                        } else if (line === '![图片]') {
+                            // 处理图片，按顺序从 imageUrls 中插入图片
+                            if (this.imageIndex < this.imageUrls.length) {
+                                this.contents.push({ type: 'image', data: this.imageUrls[this.imageIndex] });
+                                this.imageIndex++; // 引用下一张图片
+                            }
+                        } else if (line !== '') {
+                            // 处理文本段落，忽略空行
+                            this.contents.push({ type: 'text', data: line });
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

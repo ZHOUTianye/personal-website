@@ -1,0 +1,598 @@
+
+*{
+	padding: 0%;
+	margin: 0%;
+	font-family: "E";
+	font-size: 16px;}
+a{
+	text-decoration: none;
+	color: black;
+}
+ul,ol{
+	list-style: none;
+}
+img{
+	border: none;
+}
+input,textarea{
+	outline: none;
+}
+body{background-color: #F3F7F8;
+}
+
+/* header */
+
+.hdLogo img{
+	height: 60px;
+}
+.pubCon{
+	width: 100%;
+	max-width: 1120px;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+
+.bodyBg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	left: 0%;
+	opacity: 0.3;
+	z-index: 9;
+	display: none;
+	}
+
+.header{
+	position: fixed;
+	height: 60px;/* header 的高度 改变它需要同时改变 .banner的bottom 属性 和 .banner .descriptionOfBanner的 height 属性*/
+	width: 100%;
+	background: linear-gradient(to right, #fff,#66cdaa);
+	z-index: 10;
+	
+}
+.hdCon{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.hdNav ul{
+	display: flex;
+	height: 60px;
+	cursor: pointer;
+	
+}
+.hdNav ul li{
+	display: block;
+	font-size: 18px;
+	padding:0 10px;
+	transition: 0.3s;
+	/* position: relative; */
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+.hdNav ul li a{
+	pointer-events: none;
+}
+.hdNav li a:hover {
+	color:mediumaquamarine;
+}
+
+.dropdown::before{
+	content:"";
+	width: 0px;
+	height: 3px;
+	background-color: mediumaquamarine;
+	position: absolute;
+	top:0 px;
+	left: 0%;
+	transition: 0.3s;
+	transition-timing-function: ease-out;
+	opacity: 1;
+}
+.dropdown:hover::before{
+	width: 140px;
+	opacity: 1;
+	}
+.hdMenu{
+	display: none;
+	width: 30px;
+	
+	border: 1px solid black;
+	border-radius: 2px;
+	
+	cursor: pointer;
+}
+.hdMenu #l1{
+	display: block;
+	
+	height: 2px;
+	background-color: black;
+	margin: 5px auto;
+}
+
+.dropdown { 
+	/* 标签栏单个标签 的属性 */
+	position: relative;
+	width: 140px;
+	z-index: 1;
+	display: inline-block;
+	transition: 0.3s;
+	
+
+}
+
+.dropdown:hover {
+	/* 标签栏单个标签 鼠标悬浮属性 */
+    background-color: #ffffff;
+    color: mediumaquamarine;
+	/* font-weight: 700; */
+}
+	
+.dropdown-content { 
+	/* 标签栏单个标签 下拉列表整体属性 */
+	display: none;
+	position: absolute;
+	
+	background-color: #F3F7F8;
+	width: 140px;
+	box-shadow: 0px 0px 0px 0px rgb(0,0,0);
+	padding: 2px 1px 3px 0px;
+	font-size: 18px;
+	transition: 0.3s;
+	
+	}
+
+		
+.dropdown:hover .dropdown-content {
+	/* 标签栏单个标签 下拉列表内容 鼠标悬浮属性 */
+	display: block;
+	background-color: #F3F7F8;
+    color:	mediumaquamarine;
+	
+	}
+
+
+
+
+.dropdown-content a{
+	/* 标签栏单个标签 下拉列表内容 单个链接属性 */
+	display: block;
+	text-decoration: none;
+	color: mediumaquamarine;
+	line-height: 100%;
+	width: 133px;
+	height:28px;
+	padding: 14px 0px 3px 6px;
+	transition: 0.3s;
+	
+	
+}
+#secondline{ /*两行的重新设置高度*/
+	display: block;
+	text-decoration: none;
+	color: mediumaquamarine;
+	line-height: 100%;
+	width: 133px;
+	height:40px;
+	padding: 10px 0px 3px 6px;
+	transition: 0.3s;
+}
+
+.dropdown-content a:hover{
+	
+	background-color: mediumaquamarine;
+	color: white;
+	z-index: 1;
+}
+
+
+#secondline:hover{ /*两行的重新设置：伪类选择器不能实现的要id来*/
+	background-color: mediumaquamarine;
+	color: white;
+}
+
+
+
+/*banner*/
+
+.banner{
+	height: 650px;
+	
+	position: relative;
+	bottom:90px;/*banner手动向上移动的距离*/
+}
+
+.banner a{
+	display: block;
+	height: 500px;
+	background: no-repeat center;	
+}
+.banner a.small{
+	display: none;
+}
+
+.banner .swiper-pagination-bullet{
+	background-color: mediumaquamarine;
+	height: 18px;
+	width: 18px;
+	
+}
+
+.banner .descriptionOfBanner{
+	position: relative;
+	display: block;
+	/* background-color: rgba(102, 205, 170, 0.2); */
+	/* background-color: rgba(102, 205, 170, 0.1); */
+	color: rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	
+	/*注意 这两项的改变会直接影响banner的位置 原因猜测：该项内容本位于banner上方 增加它的高度会默认向下移动banner*/
+	height: 130px;
+	padding:10px;
+	/*注意 这两项的改变会直接影响banner的位置 上边两项60标题fixed自动上移+90手动=130主要板块自动下移+10padding自动下移+10padding自动下移*/
+	
+	z-index: 3;
+	top: 400px;
+	margin-left: 7%;
+	width: 45%;
+	min-width: 100px;
+	max-width: 600px;
+	font-size: 200%;
+	
+	font-weight: 900;
+	
+	
+}
+.selfintro{
+	display: block;
+	margin-top: 100px;
+	
+	
+}
+
+
+
+.swiper-container{
+	max-width: 1500px;
+}
+
+.swiper-slide .big, .swiper-slide-active .small{
+  transition: transform 8s;
+}
+
+.swiper-slide-active .big,.swiper-slide-active .small{
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+footer{
+	/* position:relative; 父级没有时 relative =static */ 
+	position: absolute;
+	top: 1000px;
+	left:0;
+	/* bottom: 0px;
+	height: 300px; */
+	width: 100%;
+	background: linear-gradient(to right, #fff,#66cdaa); 
+	
+}
+
+.contact{
+	justify-content: space-between;
+	display: flex;
+	width: 80%;
+	padding-left:10%;
+	padding-right:10%;
+	padding-top: 40px;
+	max-width: 1200px;
+	
+}
+
+.footerleft{
+	display: block;
+	
+
+	/* margin-right: 100px; */
+	/* text-align: center; */
+}
+.footerleft .finalogo{
+	display: block;
+	
+	margin: 0 auto;
+	height: 120px;	
+/* 	position: relative;
+	bottom: 30px;
+	left: 50px; */
+	
+}
+.footerleft p{
+
+	position: relative;
+	/* bottom: 30px;
+	left: 20px; */
+	
+}
+
+
+.footermiddle {
+	position: relative;
+
+	display: inline-block;
+	line-height: 170%;	
+}
+
+.footerright{
+	display: inline-block;
+	position: relative;
+	line-height: 170%;	
+	width: 35%;
+	min-width: 305px;
+/* 	margin-left:100px; */
+/* 	bottom: 20px; */
+	
+	
+}
+.footerright .motto{
+	position: relative;
+	display: inline-block;
+	width: 165px;
+
+}
+.footerright .copyright{
+	position: relative;
+	/* top:30px; */
+	
+}
+
+
+/*****************************************************************************************************************/
+
+
+
+@media(max-width:990px){
+.pubCon{
+	width: 100%; 
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+/*header*/
+.hdNav{
+	display: none;
+	position: absolute;
+	top: 61px;
+	left:0;
+	width: 100%;
+}
+.hdNav ul{
+	display:flex;
+	height:auto;
+	flex-direction: column;
+	text-align: center;
+	display: block;
+}
+.dropdown{
+	width: 100%;
+}
+
+.hdNav ul li{
+	
+	/* height: 40px; */
+	/* padding:0 1px; */
+	/* line-height: 10px; */
+	display: block;
+	text-align: left;
+	background-color: #F3F7F8;
+	border-bottom:1px solid #e8e8e8;
+}
+
+.dropdown-content{
+	display: none;
+}
+.hdNav li::after{
+	display: none;
+	
+}
+
+
+.hdMenu{
+	
+	display: block;
+	padding:5px;
+}
+.hdMenu.active{
+	padding:6px 1px 4px 9px;
+}
+.hdMenu i{
+	transform-origin:left;
+	transition: 0.3s;
+	width:20px;
+}
+
+.hdMenu.active i:nth-child(1){
+	transform: rotate(45deg);
+	width:24px;
+	position: relative;
+	right: 1.1px;
+	bottom:2.7px;
+}
+.hdMenu.active i:nth-child(3){
+	transform: rotate(-45deg);
+	width:24px;
+	position: relative;
+	right: 1.1px;
+	top:0.3px;
+}
+.hdMenu.active i:nth-child(2){
+	opacity: 0;
+}
+
+
+
+
+.dropdown:hover .dropdown-content {
+	/* 标签栏单个标签 下拉列表内容 鼠标悬浮属性 */
+	display: none; 
+
+}
+.hdNav ul li a{
+	pointer-events: unset;
+	display: block;
+}
+
+
+
+
+
+/* banner************************************** */
+
+.banner{
+	height: 650px;
+	position: relative;
+	bottom:90px;/*banner手动向上移动的距离*/
+}
+
+.banner a{
+	display: none;
+	height: 500px;
+	background: no-repeat center;	
+}
+.banner a.small{
+	display: block;
+	height: 500px;
+	background: no-repeat center;	
+}
+
+.banner .swiper-pagination-bullet{
+	background-color: mediumaquamarine;
+	height: 18px;
+	width: 18px;
+	
+}
+
+.banner .descriptionOfBanner{
+	position: relative;
+	display: block;
+	background-color: mediumaquamarine;
+	opacity: 0.8;
+	border-radius: 5px;
+	
+	/*注意 这两项的改变会直接影响banner的位置 原因猜测：该项内容本位于banner上方 增加它的高度会默认向下移动banner*/
+	height: 130px;
+	padding:10px; 
+	/*注意 这两项的改变会直接影响banner的位置 上边两项60标题fixed自动上移+90手动=130主要板块自动下移+10padding自动下移+10padding自动下移*/
+	
+	z-index: 3;
+	top: 400px;
+	margin-left: 7%;
+	width: 75%;
+	min-width: 100px;
+	font-size: 190%;
+	
+	font-weight: 900;
+	color:white;
+	
+}
+.Hightlights{
+	display: block;
+	margin-top: 100px;
+	
+	
+}
+footer{
+	/* position:relative; 父级没有时 relative =static absolute=fixed*/ 
+	bottom: 0px;
+	height: 300px;
+	width: 100%;
+	background: linear-gradient(to right, #fff,#66cdaa); 
+	
+}
+
+.contact{
+	justify-content: space-between;
+	display: flex;
+	width: 80%;
+	padding-left:10%;
+	padding-right:10%;
+	padding-top: 40px;
+	
+}
+
+.footerleft{
+	display: block;
+	
+
+	/* margin-right: 100px; */
+	/* text-align: center; */
+}
+.footerleft .finalogo{
+	display: block;
+	
+	margin: 0 auto;
+	height: 120px;	
+/* 	position: relative;
+	bottom: 30px;
+	left: 50px; */
+	
+}
+.footerleft p{
+
+	position: relative;
+	/* bottom: 30px;
+	left: 20px; */
+	
+}
+
+
+.footermiddle {
+	position: relative;
+
+	display: inline-block;
+	line-height: 170%;	
+}
+
+.footerright{
+	display: inline-block;
+	position: relative;
+	line-height: 170%;	
+	width: 35%;
+	min-width: 305px;
+/* 	margin-left:100px; */
+/* 	bottom: 20px; */
+	
+	
+}
+.footerright .motto{
+	position: relative;
+	display: inline-block;
+	width: 165px;
+
+}
+.footerright .copyright{
+	position: relative;
+	/* top:30px; */
+	
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+

@@ -1,0 +1,32 @@
+<div class="passage">
+      <!-- 渲染部分 -->
+		  <div v-for="(section, index) in parsedSections" :key="index" class="txtpart" :id="'EOpart' + (index + 1)">
+        <!-- 渲染大标题 -->
+			<h2 class="txt" id="outlinebig">{{ section.title }}</h2>
+
+        <!-- 渲染小标题（如果存在） -->
+			<h3 v-if="section.subTitle" class="txt" id="outlinesmall">{{ section.subTitle }}</h3>
+
+        <!-- 渲染段落和图片 -->
+			<div v-for="(content, cIndex) in section.contents" :key="cIndex">
+			<p v-if="content.type === 'text'" class="txt">{{ content.data }}</p>
+			<img v-else-if="content.type === 'image'" :src="content.data" alt="图片加载中" class="recentnewsphotos"/>
+          </div>
+		  </div>
+	  </div>
+      <!-- 目录部分，移到内容后面 -->
+      <div class="jindutiao">
+		<div class="allheightcalc">
+			<h1 class="txtpart" id="quickjump">Quick jump to section...</h1>
+			<ul>
+				<li v-for="(section, index) in parsedSections" :key="index" class="txtpart2" :id="'index' + index">
+					{{ section.title }}
+				</li>
+			</ul>
+			<div class="line"></div>
+		</div>
+		<div class="readingprogress">
+			<p class="readingprogress1">Reading Progress</p>
+			<div class="readingprogress2"></div>
+        </div>
+	  </div>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=screen-width,initial-scale=1">
+		<title>Having fun in Guilin!</title>
+		<link rel="Shortcut Icon" href="../img/icon.ico">
+		<link rel="stylesheet" href="../css/swiper.css">
+		<link rel="stylesheet" href="../font/iconfont.css">
+		<link rel="stylesheet" href="../font/font v2/iconfont.css">
+		<link rel="stylesheet" href="../css/clock.css">
+		<link rel="stylesheet" type="text/css" href="../new.css">
+		<link rel="stylesheet" href="../css/hover.css">
+		<link rel="stylesheet" href="../css/content.css">
+		
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+		<script src="https://unpkg.com/vue@3"></script>
+    <style>
+		@font-face {
+		  font-family: "E";
+		  /* src: url("font/FuturaStd-Light.otf"); */
+		  /* src: url("font/得意黑 斜体.ttf"); */
+		  src: url("../font/re2.otf");
+		}
+		@font-face {
+		  font-family: "C";
+		  /* src: url("font/FuturaStd-Light.otf"); */
+		  /* src: url("font/得意黑 斜体.ttf"); */
+		  src: url("../font/Tahu!.ttf");
+		}
+		@font-face {
+			font-family: "G";
+			/* src: url("font/FuturaStd-Light.otf"); */
+			/* src: url("font/得意黑 斜体.ttf"); */
+			src: url("../font/berling.ttf");
+		}
+		@font-face {
+			/* learnmore专用 */
+			font-family: "L";
+			src: url("../font/NeonOne.otf");
+		}
+		
+		@font-face {
+			/* 时钟专用 */
+			font-family: "M";
+			src: url("../font/FuturaStd-Light.otf"); 
+		}
+    </style>
+</head>
+<body>
+	<div class="bodyBg"></div>
+	<header class="header">
+	</header>
+	
+	<div class="maincontent">
+	<div class="headerdown">
+		<div class="breadcrumbs">	
+			<p><a href="../index.html" >Home</a> </p>
+			<p>> Recent News</p>
+		</div>
+		
+		<div class="contenttitle">
+			<p class="columnname">Thoughts While Traveling Column</p>
+			<p class="articletitle">Having fun in Guilin</p>
+			<p class="titlearrow">  </p>
+			
+		
+		<div class="contentAuthoranddate">
+			<p id="columnwelcome">
+
+Welcome to the Thoughts While Traveling column, where I share spontaneous musings and reflections from my journeys. The writing may not always be detailed, but it's meant to be a light read, like a casual chat. Relax and enjoy!</p>
+			<br>
+			<p>Author: Happy Tianye</p>
+			<p>Date: &nbsp;&nbsp;&nbsp;&nbsp;2024/10/07</p>
+			<br>
+			<p>2197 words, 8 minutes</p>
+		</div>
+		</div>
+	
+	
+    <div id="app">
+	  
+
+    </div>
+	
+	
+	<footer class="footer">
+		
+	</footer>
+	<script>
+	   // 用 jQuery.load 动态加载，app相关的需要在RecentNewsNew中配置
+		$('.head').load('./models/head_en.html');
+	   $('.header').load('./models/header_en.html');
+			// console.log('Header 加载完成');
+			// $('#app').load('./models/RecentNews_en.html');
+			// console.log('Headerx 加载完成');
+	   $('.footer').load('./models/footer_en.html');
+			
+	 </script>
+	<script>
+		definedurls =[
+					'../img/RecentNews photos/2-0.jpg',
+					'../img/RecentNews photos/2-2.jpg',
+					'../img/RecentNews photos/2-3.jpg',
+					'../img/RecentNews photos/2-1.jpg',
+					'../img/RecentNews photos/2-3(2).jpg',
+					'../img/RecentNews photos/2-4.jpg',
+					'../img/RecentNews photos/2-5.jpg',
+					'../img/RecentNews photos/2-6.jpg'
+		];
+	</script>
+	
+    
+	<script>
+			var year=new Date().getFullYear();
+			$(".year").html(year);
+					
+				// 获取图片元素的顶部距离
+			var imageTop = document.getElementsByClassName("big").offsetTop;
+			window.scrollTo(0, 0);
+			window.onbeforeunload = function(){
+				window.scrollTo(0, 0);
+				document.documentElement.scrollTop = 0;  //ie下
+				document.body.scrollTop = 0;  //非ie	
+			 }
+
+	</script>
+	
+	
+	<script src="../js/RecentnewsNew.js"></script>
+</body>
+</html>

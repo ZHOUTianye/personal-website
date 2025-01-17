@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			for(var i=1 ; i<allA.length; i++){
+				
+				allA[i].num=i ;
+				allA[i].onclick=function(){
+					/*onclick作为点击响应函数 不能将内置参数传递给外部 + 
+					js第一遍浏览页面时会忽略onclick而直接带着全局参数执行下面代码
+					若必须传递 只能把可能运行的其他操作放进去进而完成参数传递
+					猜测this可以完成这个功能 2.3
+					*/
+					oindex=this.num;
+					picindex=this.num;
+					console.log(picindex)
+					var picindex=oindex-DTRindex; //20-20
+					
+					console.log(oindex)
+					
+					imglist.style.left=-1510*picindex+"px"; //偏移函数：值为状态量（x轴的位置坐标 正：向右移动 负:向左移动）
+					
+					for (var i=0;i<navDivArr.length;i++){
+						
+						navDivArr[i].style.backgroundColor="";
+						navDivArr[picindex].style.backgroundColor="black";
+						
+					}
+					position=-1510*picindex;
+				
+				
+					/*move(imglist,"left",-1370*(index-11),10,function(){});*/
+				console.log(picindex,position);
+				
+				for(var i=1 ; i<100; i++){
+					prev.onclick=function(){
+						console.log(picindex);
+						if (picindex==0){	
+							picindex=imgArr.length-1;
+							imglist.style.left=-3020+"px";
+						
+						}
+						else{
+							imglist.style.left=(1510-picindex*1510)+"px";
+							picindex--
+						}
+						console.log(picindex);
+						
+						for (var i=0;i<navDivArr.length;i++){
+							navDivArr[i].style.backgroundColor="";
+							navDivArr[picindex].style.backgroundColor="black";
+							
+						}
+				
+					}
+					next.onclick=function(){
+						console.log(picindex);
+						picindex++
+						imglist.style.left=(-1510*picindex)+"px";
+						if (picindex>imgArr.length-1){
+							picindex=0;
+							imglist.style.left=0+"px";
+						}
+						console.log(picindex);
+						for (var i=0;i<navDivArr.length;i++){
+							navDivArr[i].style.backgroundColor="";
+							navDivArr[picindex].style.backgroundColor="black";
+						}
+						}
+					}
+				}
+				/*知道当前图片位置，将这个位置传递给轮播*/
+			}
+			var prev=document.getElementById("prev");
+			var next=document.getElementById("next");
+			
+			for(var i=1 ; i<100; i++){
+				prev.onclick=function(){
+					console.log(picindex);
+					if (picindex==0){	
+						picindex=imgArr.length-1;
+						imglist.style.left=-3020+"px";
+					
+					}
+					else{
+						imglist.style.left=(1510-picindex*1510)+"px";
+						picindex--
+					}
+					console.log(picindex);
+					
+					for (var i=0;i<navDivArr.length;i++){
+						navDivArr[i].style.backgroundColor="";
+						navDivArr[picindex].style.backgroundColor="black";
+						
+					}
+			
+				}
+				next.onclick=function(){
+					
+					picindex++
+					
+					imglist.style.left=(-1510*picindex)+"px";
+					if (picindex>imgArr.length-1){
+						picindex=0;
+						imglist.style.left=0+"px";
+				
+				
+					}
+					
+					for (var i=0;i<navDivArr.length;i++){
+						navDivArr[i].style.backgroundColor="";
+						navDivArr[picindex].style.backgroundColor="black";
+						
+					}
+				}
+				
+				
+				}
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

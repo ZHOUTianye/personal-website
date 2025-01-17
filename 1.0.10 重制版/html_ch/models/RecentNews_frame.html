@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=screen-width,initial-scale=1">
+		<title>See you in Pittsburgh!</title>
+		<link rel="Shortcut Icon" href="../img/icon.ico">
+		<link rel="stylesheet" href="../css/swiper.css">
+		<link rel="stylesheet" href="../font/iconfont.css">
+		<link rel="stylesheet" href="../font/font v2/iconfont.css">
+		<link rel="stylesheet" href="../css/clock.css">
+		<link rel="stylesheet" type="text/css" href="../new.css">
+		<link rel="stylesheet" href="../css/hover.css">
+		<link rel="stylesheet" href="../css/content.css">
+		
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+		<script src="https://unpkg.com/vue@3"></script>
+    <style>
+		@font-face {
+		  font-family: "E";
+		  /* src: url("font/FuturaStd-Light.otf"); */
+		  /* src: url("font/得意黑 斜体.ttf"); */
+		  src: url("../font/re2.otf");
+		}
+		@font-face {
+		  font-family: "C";
+		  /* src: url("font/FuturaStd-Light.otf"); */
+		  /* src: url("font/得意黑 斜体.ttf"); */
+		  src: url("../font/Tahu!.ttf");
+		}
+		@font-face {
+			font-family: "G";
+			/* src: url("font/FuturaStd-Light.otf"); */
+			/* src: url("font/得意黑 斜体.ttf"); */
+			src: url("../font/berling.ttf");
+		}
+		@font-face {
+			/* learnmore专用 */
+			font-family: "L";
+			src: url("../font/NeonOne.otf");
+		}
+		
+		@font-face {
+			/* 时钟专用 */
+			font-family: "M";
+			src: url("../font/FuturaStd-Light.otf"); 
+		}
+    </style>
+</head>
+<body>
+	
+	<div class="bodyBg"></div>
+	<header class="header">
+		<div class="pubCon hdCon">
+			<a href="index.html" class="hdLogo">
+				<img src="../logo2.png" alt="">
+			</a>
+			
+			<nav class="hdNav">
+				<ul id="tags">	
+					<div class="dropdown">
+						<li class="dropdownli"><a href="">About me</a></li>
+						<div class="dropdown-content">
+							<a href="" class="dropdownlinks">Self introduction</a> 
+							<a href="" >Secrets</a>
+						</div>
+					</div>
+					<div class="dropdown">
+						<li class="dropdownli"><a href="">Experiences</a></li>
+						<div class="dropdown-content">
+								<a href="" class="dropdownlinks" id="secondline">My Life Clock& Timeline</a> 
+								<a href="" class="dropdownlinks">Favorites</a> 
+								<a href="" class="dropdownlinks">Stories booklets</a> 
+								<a href=""  id="secondline">Reviews and recommendations</a> 
+						</div>
+					</div>
+					<div class="dropdown">
+						<li class="dropdownli"><a href="">Moments</a></li>
+						<div class="dropdown-content">
+							<a href="" class="dropdownlinks">2023</a> 
+							<a href="" >2022</a>
+						</div>
+					</div>
+					<div class="dropdown">
+						<li class="dropdownli"><a href="">Quick Links</a></li>
+						<div class="dropdown-content">
+							<a href="" class="dropdownlinks">Products</a> 
+							<a href="" class="dropdownlinks">Message Board</a> 
+							<a href="" class="dropdownlinks">Website Data</a> 
+							<a href=""  id="secondline">Download documents</a>
+						</div>
+					</div>
+					<div class="lang">
+						<a href="baidu.com" id="chinese">中</a>
+						<li class="xuanzhong" id="xuanzhong">Eng</li>
+						<a href="baidu.com" id="espanol">Esp</a>
+					</div>
+				</ul>
+			</nav>
+			<div class="hdMenu ">
+					<i id="l1"></i>
+					<i id="l1"></i>
+					<i id="l1"></i>
+			</div>
+		</div>
+		
+	</header>
+	
+	<div class="maincontent">
+	<div class="headerdown">
+		<div class="breadcrumbs">	
+			<p><a href="index.html" >Home</a> </p>
+			<p>> Recent News</p>
+		</div>
+		<div class="contenttitle">
+			
+			<p class="articletitle">Embark on a new stage in life - see you in Pittsburgh!</p>
+			<p class="titlearrow">  〉〉</p>
+			
+		
+		<div class="contentAuthoranddate">
+			<p>Author: Lucky Tianye</p>
+			<p>Date: &nbsp;&nbsp;&nbsp;&nbsp;2024/04/01</p>
+			<br>
+			<p>2482 words, 8 minutes</p>
+		</div>
+		</div>
+	
+	
+    <div id="app">
+	  <div class="passage">
+      <!-- 渲染部分 -->
+		  <div v-for="(section, index) in parsedSections" :key="index" class="txtpart" :id="'EOpart' + (index + 1)">
+        <!-- 渲染大标题 -->
+			<h2 class="txt" id="outlinebig">{{ section.title }}</h2>
+
+        <!-- 渲染小标题（如果存在） -->
+			<h3 v-if="section.subTitle" class="txt" id="outlinesmall">{{ section.subTitle }}</h3>
+
+        <!-- 渲染段落和图片 -->
+			<div v-for="(content, cIndex) in section.contents" :key="cIndex">
+			<p v-if="content.type === 'text'" class="txt">{{ content.data }}</p>
+			<img v-else-if="content.type === 'image'" :src="content.data" alt="图片加载中" />
+          </div>
+		  </div>
+	  </div>
+      <!-- 目录部分，移到内容后面 -->
+      <div class="jindutiao">
+		<div class="allheightcalc">
+			<h1 class="txtpart" id="quickjump">Quick jump to section...</h1>
+			<ul>
+				<li v-for="(section, index) in parsedSections" :key="index" class="txtpart2" :id="'index' + index">
+					{{ section.title }}
+				</li>
+			</ul>
+			<div class="line"></div>
+		</div>
+		<div class="readingprogress">
+			<p class="readingprogress1">Reading Progress</p>
+			<div class="readingprogress2"></div>
+        </div>
+	  </div>
+
+    </div>
+	
+	
+	<footer>
+		<div class="pubCon contact">
+		
+			<div class="footerleft">
+				<img src="../logo2.png" alt="" class="finalogo">
+				<p>
+				Tianye's Homepage
+				</p>
+			</div>
+			<div class="footermiddle">
+				<p>
+				<i class="iconfont icon-phone-fill"></i>+86 136 7118 9667/+1 878 670 5676<br>
+				<i class="iconfont icon-whatsapp"></i>+86 136 7118 9667 <br>
+				<i class="iconfont icon-wechat-fill"></i>zhoutianye20020522 <br>
+				<i class="iconfont icon-QQ"></i>2603225021 <br>
+				<i class="iconfont icon-mail-fill"></i>tianyez@andrew.cmu.edu <br>
+				<i class="iconfont icon-linkedin"></i><a href="https://www.linkedin.com/in/tianyezhou/">@Tianye ZHOU| LinkedIn</a><br>
+				<i class="iconfont icon-facebook"></i><a href="https://www.facebook.com/profile.php?id=100089918741743">@Tianye Zhou| Facebook</a> <br>
+				<i class="iconfont icon-instagram"></i><a href="https://www.instagram.com/skyzhou522/?hl=en">@skyzhou0522| Instagram</a> <br>
+				</p>
+			</div>
+			<div class="footerright">
+				<!-- <img src="img/motto-en.png" alt="" class="motto"> -->
+				<div class="copyright">
+					
+					<p>Permenant Address: <br> No.3, W.10th Row, Guhuai Rd, Daheifa Village,<br> Caiyu Town, Daxing District, Beijing, China</p>
+					<br>
+					<br>
+					
+					<p id="pofb1">Designed and Developed by ZHOU Tianye. </p>
+					
+					<p>Copyright &copy; 2023-<span class="year"></span> ZHOU Tianye. <br>All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+    <script>
+      const { createApp, ref, computed } = Vue;
+
+      createApp({
+        setup() {
+          // 使用 ref() 来定义响应式数据
+          const markdownText = ref(`
+# 大标题 1
+## 小标题 1
+这是第一段大标题1。
+这是第二段大标题1。
+[图片]
+
+# 大标题 2
+这是第一段大标题2。
+这是第二段大标题2。
+[图片]
+这是第三段大标题2。
+
+# 大标题 2
+这是第一段大标题2。
+这是第二段大标题2。
+[图片]
+这是第三段大标题2。
+# 大标题 2
+这是第一段大标题2。
+这是第二段大标题2。
+[图片]
+这是第三段大标题2。
+# 大标题 2
+这是第一段大标题2。
+这是第二段大标题2。
+[图片]
+这是第三段大标题2。
+# 大标题 2
+这是第一段大标题2。
+这是第二段大标题2。
+[图片]
+这是第三段大标题2。
+
+
+
+          `);
+
+          // 图片 URL 列表
+          const imageUrls = ref([
+            'https://via.placeholder.com/400x200?text=Image+1',
+            'https://via.placeholder.com/400x200?text=Image+2'
+          ]);
+
+          let imageIndex = 0; // 图片索引
+
+          // 解析 Markdown 文本为结构化内容
+          const parsedSections = computed(() => {
+            const lines = markdownText.value.split('\n');
+            const sections = [];
+            let currentSection = null;
+
+            lines.forEach((line) => {
+              // 判断是否为大标题
+              if (line.startsWith('## ')) {
+                if (currentSection) {
+                  sections.push(currentSection);
+                }
+                currentSection = { title: line.substring(2), subTitle: null, contents: [] };
+              }
+              // 判断是否为小标题
+              else if (line.startsWith('### ')) {
+                if (currentSection) {
+                  currentSection.subTitle = line.substring(3);
+                }
+              }
+              // 检测到【图片】标记并插入图片
+              else if (line === '[图片]') {
+                if (imageIndex < imageUrls.value.length) {
+                  currentSection.contents.push({ type: 'image', data: imageUrls.value[imageIndex] });
+                  imageIndex++;
+                }
+              }
+              // 处理文本段落
+              else if (line.trim() !== '') {
+                currentSection.contents.push({ type: 'text', data: line });
+              }
+            });
+
+            // 把最后一个 section 添加到 sections
+            if (currentSection) {
+              sections.push(currentSection);
+            }
+
+            return sections;
+          });
+
+          // 返回 setup() 中需要的数据和计算属性
+          return {
+            markdownText,
+            parsedSections
+          };
+        }
+      }).mount('#app');
+    </script>
+	<script>
+			var year=new Date().getFullYear();
+			$(".year").html(year);
+					
+				// 获取图片元素的顶部距离
+			var imageTop = document.getElementsByClassName("big").offsetTop;
+			window.scrollTo(0, 0);
+			window.onbeforeunload = function(){
+				window.scrollTo(0, 0);
+				document.documentElement.scrollTop = 0;  //ie下
+				document.body.scrollTop = 0;  //非ie	
+			 }
+
+	</script>
+	
+	
+	<script src="../js/RecentnewsNew.js"></script>
+</body>
+</html>

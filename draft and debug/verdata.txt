@@ -1,0 +1,233 @@
+1.0.0 Jan 20,2023 14:18 
+	Began the website developing. Aimed to build a wonderful website for myself.
+1.0.0.1 Jan 24,2023 feature: 
+	Headline and main concent have been added to the mainpage.
+	Copyright infomation have been added.
+1.0.0.2 Jan 25,2023 feature: 
+	CSS file added.
+1.0.1 Jan 26,2023 feature: 
+	Have a clear plan and a initial design for the website.
+	The design will be similar like SEE/CityU official website.
+1.0.2 Jan 27,2023 feature:
+	STkaiti has already accepted by the code editer. 
+	Margin is added which is helpful for reading. 
+	Title decoration with colors. 
+1.0.3 Jan 28,2023 feature:
+	Recent news imgs and descriptions have been added. 
+	Buttons can be used for switching imgs. 
+	Bugs fixes 
+1.0.4 Jan 29,2023 feature: 
+	Recent news-imgs can be switched by using turning button 
+	Codes are more generalized for adding more pictures.
+	Bugs fixes 
+1.0.5 Jan 30,2023 feature: 
+	Beautify the navagation block and modify the background to a more obvious contrast color.
+	Codes are more generalized for adding more links before Recent news section. 
+1.0.6 Feb 2,2023 feature:
+	Codes are more generalized. 
+	Delete useless codes: JavaScript code : 158 lines-> 102 lines with the same functions.  
+1.0.7 Feb 3,2023 feature: 
+	Middle version: Not published
+	Bugs fixes.
+	Delete useless codes.
+1.0.8 Feb 10,2023 feature:
+	Revolution version: 
+	get new protocol: www.tianyezhou.com and new server ip:47.242.73.60.
+	***A new header section***
+	Add a new personal logo
+	Fix the header section always at the top.
+	Tags transition interval set up at 0.3s.
+	Responsible web design: 990px below setup a new menu section.
+	
+	
+	***A new footer section***
+	Add personal logo, contact info, motto, address, Copyright infomation.
+	Introduce iconfont to beautify footer section.
+	
+	***Others
+	Rewrite the HTML code CSS code and JS code for the preparation of the Responsible web design.
+	
+	Introduce Jquery and Swiper for a professional and commercial Recent section.
+	Insert a personal icon and a personal logo.
+
+！remove # sourceMappingURL=maps/swiper.min.js.map	in default swiper.min.js
+
+1.0.8.1 Feb 13,2023 feature:
+	www.tianyezhou.com real web has been published.
+	full access for viewers for all over the world.
+1.0.8.2 Feb 18,2023 feature:
+	New font is updated.
+	Bugs fixes.
+	Remove motto for English version.
+	
+1.0.9 Feb 24,2023 feature:
+	Gray Background added for the menu section (for small screen)
+	Scroll bug fixes (Compromise scheme)
+
+1.0.10 Mar 4,2023 feature:
+	***New Swiper***
+	zoom effect added
+	banner discription background color removed——more natural
+	New set of pictures have been added
+	
+	***New header***
+	Sliding effect of tag marker bar
+	
+	***Bug fixes***
+	max width of the whole page has been set to ensure the experience for large screen users
+	Scroll bug fixes (Compromise scheme)
+	
+
+1.0.11 Jan 8 2024 feature:
+    Completed main page content draft. Optimized settings to adjust all content layouts.
+1.0.12 Jan 9 2024 feature:
+    Finished the welcome text content and layout.
+    Reset green background.
+1.0.13 Jan 10 2024 feature:
+    Sectionalized each unit with preliminary styling.
+    Completed Who Am I section layout and content.
+    Added new fonts, applied to the background “welcome” text.
+    Added decorative grid and introductory quotes.
+1.0.14 Jan 11 2024 feature:
+    "Learn more" button settings: added background slide effect, underline, and new font.
+    
+1.0.15 Jan 12 2024 feature:
+    Completed My Experience section layout and content.
+    Added fonts applied to “welcome” background text.
+    Optimized grid quotes and main text font sizes.
+    
+1.0.16 Jan 13 2024 feature:
+    Completed special fan-shaped design for My Experience section.
+    
+1.0.17 Jan 14 2024 feature:
+    Integrated hover.css, adjusted “Learn More” background animation.
+    Completed My Memories section layout and intro content.
+    
+1.0.18 Jan 15 2024 feature:
+    Special circular arrangement for multiple images in My Memories section.
+
+1.0.19 Jan 16 2024 feature:
+    Adjusted My Memories image masks and added descriptions for all images (30 total).
+
+1.0.20 Jan 17 2024 feature:
+    CDN service set up, significantly improving webpage access and browsing speed.
+
+1.0.21 Jan 18 2024 feature:
+    Quick links section - added product, message board, favorites, and file download design.
+    
+1.0.22 Jan 20 2024 feature:
+    1st Anniversary! All sections completed.
+    Quick links section - optimized animation effects and added 4 iconfont decorations.
+    Quick links section - reset card backgrounds.
+    Added webpage statistics and page-turn clock.
+    Header and footer semi-transparency set with dark gray/black background and white font.
+    Header adjusted for EN/CH/ES language toggle, with other sections moved left.
+    
+
+1.0.23 Jan 21 2024 feature:
+    Webpage update, CDN cache expiration reset.
+    Fixed CDN timing bug.
+    
+1.0.24 Feb 24 2024 feature:
+    Added extensive shadows for a 3D effect, especially on hover content.
+    Colorthief alternative - blurred header effect.
+    Fixed iconfont bug in section 4.
+    Adjusted main theme color to brown-gold.
+    Relocated language settings.
+    Added tab dividers.
+    Adjusted times location.    
+    Main page temporarily paused.
+
+1.0.25 Mar 26 2024 feature:
+    [Maintenance version]
+    Added cursor property to card sections for indication.
+    Bug fixes.
+    
+1.0.26 Apr 1 2024 feature:
+    [Template] Created 3 webpage content types within Swiper: Weekly Journal/Bulletin.
+    Completed framework for first subpage: Embark on a new stage in life - see you in Pittsburgh!
+    Reduced header shadow.
+    Added shadow to tabs and language options.
+    Softened "Learn more" and quicklinks shadows.
+
+1.0.27 Apr 2 2024 feature:
+    Added 2000 words to the framework of the first subpage.
+
+1.0.28 Apr 3 2024 feature:
+    Set 3D text effect.
+    Added sticky quick jump module.
+
+1.0.29 Apr 4 2024 feature:
+    Configured JS for quick jump section.
+    Added reading progress module.
+1.0.30 Apr 5 2024 feature:
+    [Maintenance version]
+    Fixed quick jump display bug on Chrome.
+    Fixed header width display bug on Safari and Firefox.
+1.0.31 Apr 7 2024 feature:
+    Reading progress module updated with "reading completed" notification.
+    Converted reading progress percentage to scrollbar.
+    Bug fixes.
+
+1.0.32 Apr 8 2024 feature:
+    Existing content released.
+    Updated homepage banner with the first batch of 2024 images.
+
+1.0.33 May 31 2024 feature:
+    [Maintenance version]
+    Adjusted for Firefox content overflow issue.
+
+1.0.34 Jul 10 2024 feature:
+    Updated homepage banner with the second batch of 2024 images.
+    Updated self-introduction and welcome text.
+    Updated contact email.
+    Added title font shadows.
+    Adjusted fonts and layout for gratitude section and banner.
+
+1.0.35 Jul 22 2024 feature:
+    Added link to banner1.
+    Replaced photowall source and compressed images for reduced memory usage.
+    Fixed photowall#29 character display issue.
+    Improved page loading speed, banner2 display speed increased (issue not fully resolved).
+
+1.0.35.1 Sep 2 2024 feature:
+    SSL certificate configured for HTTPS support.
+
+1.0.36 Sep 27 2024 feature:
+    [Maintenance version]
+    Fixed homepage return link bug.
+    Aligned footer content across all sections.
+    Fixed display inconsistency for reading progress in recent news across browsers.
+
+1.0.37 Oct 4 2024 feature:
+    [Testing version]
+    Attempted source replacement for recent news 1, tested Vue real-time rendering.
+    Updated recent news 1 text content (2400->1700 words).
+1.0.38 Oct 6 2024 feature:
+    Removed height limit on progress bar in recent news template to suit future pages.
+    Shortened spacing between recent news titles, text, and progress bar.
+    Removed fixed footer distance in recent news to prevent overflow on smaller screens.
+
+1.0.39 Oct 7 2024 feature:
+    Redesigned recent news page title.
+    Adjusted some font colors.
+    Added column, reserved layout, content, and format.
+
+1.0.40 Oct 8 2024 feature:
+    Added full page for recent news 2 (Guilin Travel Notes).
+    Updated RecentnewsNew.js for broader adaptability across future content pages (only a and b values need adjustment in distance calculation function).
+
+1.0.41 Oct 9 2024 feature:
+    [Maintenance version]
+    Fixed progress bar jump errors in recent news and recent news 2.
+
+	
+	
+
+Current ver
+	1.0.41
+	
+
+	
+	
+	

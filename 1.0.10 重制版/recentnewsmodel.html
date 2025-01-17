@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=screen-width,initial-scale=1">
+		<title> </title>
+		<link rel="Shortcut Icon" href="img/icon.ico">
+		<link rel="stylesheet" href="css/swiper.css">
+		<link rel="stylesheet" href="font/iconfont.css">
+		<link rel="stylesheet" href="font/font v2/iconfont.css">
+		<link rel="stylesheet" href="css/clock.css">
+		<link rel="stylesheet" type="text/css" href="new.css">
+		<link rel="stylesheet" href="css/hover.css">
+		<link rel="stylesheet" href="css/content.css">
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<!-- <script src="new.js" type="text/javascript" charset="utf-8"></script> -->
+		<!-- <script src="js/pageview.js"></script> -->
+		<style>
+		    @font-face {
+		      font-family: "E";
+		      /* src: url("font/FuturaStd-Light.otf"); */
+			  /* src: url("font/得意黑 斜体.ttf"); */
+			  src: url("font/re2.otf");
+		    }
+			@font-face {
+			  font-family: "C";
+			  /* src: url("font/FuturaStd-Light.otf"); */
+			  /* src: url("font/得意黑 斜体.ttf"); */
+			  src: url("font/Tahu!.ttf");
+			}
+			@font-face {
+				font-family: "G";
+				/* src: url("font/FuturaStd-Light.otf"); */
+				/* src: url("font/得意黑 斜体.ttf"); */
+				src: url("font/berling.ttf");
+			}
+			@font-face {
+				/* learnmore专用 */
+				font-family: "L";
+				src: url("font/NeonOne.otf");
+			}
+			
+			@font-face {
+				/* 时钟专用 */
+				font-family: "M";
+				src: url("font/FuturaStd-Light.otf"); 
+			}
+		</style>
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?88e2e8a0301c9419f8bc8cea1dc93ded";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		
+		</script>
+		
+
+		 
+	</head>
+	
+	<body>
+		<!-- <div id="overlay"></div> -->
+		
+		<div class="bodyBg"></div>
+		<header class="header">
+			<div class="pubCon hdCon">
+				<a href="index.html" class="hdLogo">
+					<img src="logo2.png" alt="">
+				</a>
+				
+				<nav class="hdNav">
+					<ul id="tags">	
+						<div class="dropdown">
+							<li class="dropdownli"><a href="">About me</a></li>
+							<div class="dropdown-content">
+								<a href="" class="dropdownlinks">Self introduction</a> 
+								<a href="" >Secrets</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<li class="dropdownli"><a href="">Experiences</a></li>
+							<div class="dropdown-content">
+									<a href="" class="dropdownlinks" id="secondline">My Life Clock& Timeline</a> 
+									<a href="" class="dropdownlinks">Favorites</a> 
+									<a href="" class="dropdownlinks">Stories booklets</a> 
+									<a href=""  id="secondline">Reviews and recommendations</a> 
+							</div>
+						</div>
+						<div class="dropdown">
+							<li class="dropdownli"><a href="">Moments</a></li>
+							<div class="dropdown-content">
+								<a href="" class="dropdownlinks">2023</a> 
+								<a href="" >2022</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<li class="dropdownli"><a href="">Quick Links</a></li>
+							<div class="dropdown-content">
+								<a href="" class="dropdownlinks">Products</a> 
+								<a href="" class="dropdownlinks">Message Board</a> 
+								<a href="" class="dropdownlinks">Website Data</a> 
+								<a href=""  id="secondline">Download documents</a>
+							</div>
+						</div>
+						<div class="lang">
+							<a href="baidu.com" id="chinese">中</a>
+							<li class="xuanzhong" id="xuanzhong">Eng</li>
+							<a href="baidu.com" id="espanol">Esp</a>
+						</div>
+					</ul>
+				</nav>
+				<div class="hdMenu ">
+						<i id="l1"></i>
+						<i id="l1"></i>
+						<i id="l1"></i>
+				</div>
+			</div>
+			
+		</header>
+		
+		<div class="maincontent">
+		<div class="headerdown">
+			<div class="breadcrumbs">	
+				<p><a href="index.html" >Home</a> </p>
+				<p>> Recent News</p>
+			</div>
+			<div class="contenttitle">
+				
+				<p class="articletitle"> </p>
+				<p class="titlearrow">  〉〉</p>
+				
+			
+			<div class="contentAuthoranddate">
+				<p>Author: ZHOU Tianye</p>
+				<p>Date: &nbsp;&nbsp;&nbsp;&nbsp;2024/04/</p>
+				<br>
+				<p> words,  minutes</p>
+			</div>
+			</div>
+			
+			<div class="passage">
+				<div class="txtpart" id="EOpart1">
+					<p class="txt" id="EOpart1txt"></p>
+				</div>
+				<div class="txtpart" id="EOpart2">
+					<p class="txt" id="EOpart2txt"></p>
+				</div>
+				<div class="txtpart" id="EOpart3">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart3txt"></p>
+					<p class="txt" id="EOpart3txt"></p>
+					<p class="txt" id="EOpart3txt"><br>
+<br>
+<br>
+</p>
+				</div>
+				<div class="txtpart" id="EOpart4">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"> </h3>
+					<p class="txt" id="EOpart4txt"></p>
+				</div>
+				<div class="txtpart" id="EOpart5">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart5txt"></p>
+					<p class="txt" id="EOpart5txt"></p>
+					<p class="txt" id="EOpart5txt"> <br>
+<br>
+</p>
+				</div>
+				<div class="txtpart" id="EOpart6">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart6txt"></p>
+					<p class="txt" id="EOpart6txt"> <br>
+</p>
+				</div>
+				<div class="txtpart" id="EOpart7">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart7txt"> <br></p>
+					<p class="txt" id="EOpart7txt"> <br></p>
+				</div>
+				<div class="txtpart" id="EOpart8">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart8txt"></p>
+					<p class="txt" id="EOpart8txt"></p>
+				</div>
+				<div class="txtpart" id="EOpart9">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart9txt"></p>
+					<p class="txt" id="EOpart9txt"></p>
+				</div>
+				<div class="txtpart" id="EOpart10">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart10txt"></p>
+					<p class="txt" id="EOpart10txt"></p>
+					<p class="txt" id="EOpart10txt"></p>
+					<p class="txt" id="EOpart10txt"></p>
+					<p class="txt" id="EOpart10txt"></p>
+				</div>
+				<div class="txtpart" id="EOpart11">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart11txt"></p>
+				</div>
+				<div class="txtpart" id="EOpart12">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+				</div>
+				<div class="txtpart" id="EOpart13">
+					<h2 class="txt" id="outlinebig"></h2>
+					<h3 class="txt" id="outlinesmall"></h3>
+					<p class="txt" id="EOpart13txt"></p>
+					<p class="txt" id="EOpart13txt"> </p>
+					<p class="txt" id="EOpart13txt"></p>
+					<p class="txt" id="EOpart13txt">
+</p>
+				</div>
+			</div><!--passage  -->
+			<div class="jindutiao">
+				<h1 class="txtpart" id="quickjump">Quick jump to section...</h1>
+				<p class="txtpart2" id="index0" href=''></p>
+				<p class="txtpart2" id="index1"></p>
+				<p class="txtpart2" id="index2"></p>
+				<p class="txtpart2" id="index3"></p>
+				<p class="txtpart2" id="index4"></p>
+				<p class="txtpart2" id="index5"></p>
+				<p class="txtpart2" id="index6"></p>
+				<p class="txtpart2" id="index7"></p>
+				<p class="txtpart2" id="index8"></p>
+				<p class="txtpart2" id="index9"></p>
+				<p class="txtpart2" id="index10"></p>
+				<br>
+				<div class="line"></div>
+				<div class="readingprogress">
+					<p class="readingprogress1">Reading Progress</p>
+					<div class="readingprogress2"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		</div>
+		
+
+		
+		
+		
+		<footer>
+			<div class="pubCon contact">
+			
+				<div class="footerleft">
+					<img src="logo2.png" alt="" class="finalogo">
+					<p>
+					Tianye's Homepage
+					</p>
+				</div>
+				<div class="footermiddle">
+					<p>
+					<i class="iconfont icon-phone-fill"></i>+86 136 7118 9667/+852 6445 3711<br>
+					<i class="iconfont icon-whatsapp"></i>+86 136 7118 9667 <br>
+					<i class="iconfont icon-wechat-fill"></i>zhoutianye20020522 <br>
+					<i class="iconfont icon-QQ"></i>2603225021 <br>
+					<i class="iconfont icon-mail-fill"></i>tianyzhou9-c@my.cityu.edu.hk <br>
+					<i class="iconfont icon-linkedin"></i><a href="http://www.linkedin.com/in/tianye-zhou-4041a3265">@Tianye ZHOU| LinkedIn</a><br>
+					<i class="iconfont icon-facebook"></i><a href="https://www.facebook.com/profile.php?id=100089918741743">@Tianye Zhou| Facebook</a> <br>
+					<i class="iconfont icon-instagram"></i><a href="https://www.instagram.com/skyzhou522/?hl=en">@skyzhou0522| Instagram</a> <br>
+					</p>
+				</div>
+				<div class="footerright">
+					<!-- <img src="img/motto-en.png" alt="" class="motto"> -->
+					<div class="copyright">
+						
+						<p>Permenant Address: <br> No.3, W.10th Row, Guhuai Rd, Daheifa Village,<br> Caiyu Town, Daxing District, Beijing, China</p>
+						<br>
+						<br>
+						
+						<p>Designed and Developed by ZHOU Tianye. </p>
+						
+						<p>Copyright &copy; 2023-<span class="year"></span> ZHOU Tianye. <br>All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<script>
+		  var bannerSwiper = new Swiper ('.banner .swiper-container', {
+			speed:1000,
+			effect:"fade", 
+			// 必须每张图一样的尺寸
+		    autoplay:{
+			delay: 5000,//100秒切换一次
+			disableOnInteraction:false,
+			},
+		    loop: true, // 循环模式选项
+			zoom: true,
+		    // 如果需要分页器
+		    pagination: {
+		      el: '.banner .swiper-pagination',
+			  clickable :true,
+		    },
+		    
+		    // 如果需要前进后退按钮
+		    navigation: {
+		      nextEl: '.banner .swiper-button-next',
+		      prevEl: '.banner .swiper-button-prev',
+		    },
+		
+		  },
+		  )     
+		  </script>
+		  <script>
+				
+				var year=new Date().getFullYear();
+				$(".year").html(year);
+				
+				// 获取图片元素的顶部距离
+				var imageTop = document.getElementsByClassName("big").offsetTop;
+				
+				
+				window.scrollTo(0, 0);
+				window.onbeforeunload = function(){
+						window.scrollTo(0, 0);
+						document.documentElement.scrollTop = 0;  //ie下
+						document.body.scrollTop = 0;  //非ie	
+				 }
+			    
+				
+		  </script>
+		  
+		  
+		  <script src="js/Recentnews.js"></script>
+		  
+		  <script>
+		  $(function(){
+		  	//点击菜单按钮切换
+		  	$(".hdMenu").click(function(){
+				$(".bodyBg").toggle();
+		  		$(this).toggleClass("active")
+				$(".hdNav").slideToggle();
+		  	})
+		  	
+			$(".bodyBg").click(function(){
+				$(this).hide();
+				$(".hdMenu").removeClass("active");
+				$(".hdNav").slideUp();
+			})
+			$(window).resize(function(){
+				$(".bodyBg").hide();
+				if($(this).width()>990){
+				$(".bodyBg").hide();
+				$(".hdNav").show();
+				$(".hdMenu").addClass("active");
+				}
+			
+				else{
+				$(".hdNav").hide();
+				$(".hdMenu").removeClass("active");
+			}	
+			})
+		  })
+		  </script>
+		
+</html>

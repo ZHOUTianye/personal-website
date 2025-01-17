@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<p>Copyright &copy; 2023-<span class="year"></span> ZHOU Tianye. <br>All Rights Reserved.</p>
+		<script>
+			
+			
+						var preload=document.querySelectorAll(".swiper-slide a");
+						for (var i = 0; i < preload.length; i++) {
+						  preload[i].load();
+						}
+						var year=new Date().getFullYear();
+						$(".year").html(year);
+		</script>	
+	</body>
+</html>

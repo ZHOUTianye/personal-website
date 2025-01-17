@@ -1,0 +1,277 @@
+/* L 适用于 1510px+*/
+*{
+	font-family: 'Times New Roman', Times, serif;
+	margin:0;
+	padding:0;
+}
+#container{
+	margin:0 2.5%;
+	
+}
+
+#headline{
+	background-color: aquamarine;
+	width: 100%;
+	height:70px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+}
+h1{
+	/* 标题栏属性 */
+	width: 35%;
+	height: 35px;
+	padding: 10px;
+	text-indent: 3%;
+	display: inline-block;
+	margin-top: 10px;
+	
+}
+#tags{
+	/* 标签栏整体的属性 */
+	display: inline-block;
+	z-index: 1;
+	list-style-type: none;
+	margin: 0;
+	height:500px;
+	width: 60%;
+	
+	
+}
+#tags li{
+	/* 标签栏四个标签的属性 */
+	text-align: center;
+	width: 140px;
+	font-size: 18px;
+	display: inline-block;
+	margin-bottom: 10px;
+	padding-top:30px;
+	padding-bottom: 10px;
+
+	
+}
+.dropdown { 
+	/* 标签栏单个标签 的属性 */
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+
+
+}
+
+.dropdown:hover {
+	/* 标签栏单个标签 鼠标悬浮属性 */
+    background-color: #ffffff;
+    color: mediumaquamarine;
+	font-weight: 700;
+}
+	
+.dropdown-content { 
+	/* 标签栏单个标签 下拉列表整体属性 */
+	display: none;
+	position: absolute;
+	
+	background-color: #F3F7F8;
+	width: 140px;
+	box-shadow: 0px 0px 0px 0px rgb(0,0,0);
+	padding: 2px 1px 3px 0px;
+	font-size: 1.125rem;
+	
+	
+	}
+
+		
+.dropdown:hover .dropdown-content {
+	/* 标签栏单个标签 下拉列表内容 鼠标悬浮属性 */
+	display: block;
+	background-color: #F3F7F8;
+    color:	mediumaquamarine;
+	
+	}
+	
+
+
+
+.dropdown-content a{
+	/* 标签栏单个标签 下拉列表内容 单个链接属性 */
+	display: block;
+	text-decoration: none;
+	color: mediumaquamarine;
+	line-height: 100%;
+	width: 133px;
+	height:28px;
+	padding: 12px 0px 5px 6px;
+	
+	
+	
+}
+#secondline{ /*两行的重新设置高度*/
+	display: block;
+	text-decoration: none;
+	color: mediumaquamarine;
+	line-height: 100%;
+	width: 133px;
+	height:40px;
+	padding: 8px 0px 5px 6px;
+}
+
+.dropdown-content a:hover{
+	
+	background-color: mediumaquamarine;
+	color: white;
+	z-index: 1;
+	
+	
+
+}
+
+
+#secondline:hover{ /*两行的重新设置：伪类选择器不能实现的要id来*/
+	background-color: mediumaquamarine;
+	color: white;
+}
+
+hr{
+	margin: 0;
+	padding: 0;
+	
+}
+
+/*  */
+
+#outer{
+	width: 1510px;
+	height: 500px;
+	margin: 0 auto;
+	background-color: mediumaquamarine;
+	padding:10px 0px;
+	position: relative;
+	
+	overflow: hidden;
+}
+#imglist{
+	list-style: none;
+	width: 4530px;
+	position: absolute;
+	
+}
+#imglist li{
+	float: left;
+	margin: 0 80px;
+	
+
+}
+#imglist li img{
+	width: 1350px;
+	height: 500px;	
+	margin: 0 auto;
+	align-items: center;
+
+}
+
+#navDiv{
+	position: absolute;
+	bottom:2px;
+	left: 617.5px;
+	
+}
+#navDiv a{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border: 10px;
+	border-radius: 10px;
+	background-color: aquamarine;
+	margin: 15px;
+	opacity: 0.35;
+	filter:alpha(opacity=50);
+	
+}
+#navDiv a:hover{
+	background-color: mediumaquamarine;
+	opacity: 1;
+	
+}
+#LDiv button{
+	
+	position: absolute;
+	width: 55px;
+	height: 100px;
+	bottom:200px;
+	border: 10px;
+	border-radius: 45px;
+	background-color: aquamarine;
+	color: white;
+	font-size: 25px;
+	font-weight: 900;
+	margin: 15px;
+	opacity: 0.7;
+	filter:alpha(opacity=50);
+	
+}
+#RDiv button{
+	
+	position: absolute;
+	width: 55px;
+	height: 100px;
+	bottom:200px;
+	right: 0px;
+	border: 10px;
+	border-radius: 45px;
+	background-color: aquamarine;
+	color: white;
+	font-size: 25px;
+	font-weight: 900;
+	margin: 15px;
+	opacity: 0.7;
+	filter:alpha(opacity=50);
+	
+}
+#LDiv button:hover{
+	display:block;
+	background-color: white;
+	opacity: 1;
+	color:aquamarine;
+	font-size: 35px;
+	
+	font-weight: 900;
+	
+}
+#RDiv button:hover{
+	display:block;
+	background-color: white;
+	opacity: 1;
+	color:aquamarine;
+	font-size: 35px;
+	font-weight: 900;
+	
+}
+
+#dcnofimg{
+	position: relative;
+	float:top;
+	bottom: 200px;
+	left: 30px;
+	font-size: 26px;
+	width: 900px;
+	line-height: 120%;
+	
+}
+
+#dcnofimg a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-weight: 900;
+	background-color: mediumaquamarine;
+	opacity:0.75;
+	border:10px;
+	padding:10px;
+	border-radius: 5px;
+	
+}
+#dcnofimg a:hover {
+	text-shadow: 2px;
+}
+

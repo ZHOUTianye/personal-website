@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=screen-width,initial-scale=1">
+		<title>秋假仙纳度/鳟鱼池塘之旅</title>
+		<link rel="Shortcut Icon" href="../img/icon.ico">
+		<link rel="stylesheet" href="../css/swiper.css">
+		<link rel="stylesheet" href="../font/iconfont.css">
+		<link rel="stylesheet" href="../font/font v2/iconfont.css">
+		<link rel="stylesheet" href="../css/clock.css">
+		<link rel="stylesheet" type="text/css" href="../new.css">
+		<link rel="stylesheet" href="../css/hover.css">
+		<link rel="stylesheet" href="../css/content.css">
+		
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+		<script src="https://unpkg.com/vue@3"></script>
+    <style>
+		@font-face {
+		  font-family: "E";
+		  /* src: url("font/FuturaStd-Light.otf"); */
+		  /* src: url("font/得意黑 斜体.ttf"); */
+		  src: url("../font/re2.otf");
+		  unicode-range: U+0020-007F;
+		}
+		@font-face {
+		  font-family: "C";
+		  /* src: url("font/FuturaStd-Light.otf"); */
+		  /* src: url("font/得意黑 斜体.ttf"); */
+		  src: url("../font/Tahu!.ttf");
+		  unicode-range: U+0020-007F;
+		}
+		@font-face {
+			font-family: "G";
+			/* src: url("font/FuturaStd-Light.otf"); */
+			/* src: url("font/得意黑 斜体.ttf"); */
+			src: url("../font/berling.ttf");
+			unicode-range: U+0020-007F;
+		}
+		@font-face {
+			/* learnmore专用 */
+			font-family: "L";
+			src: url("../font/NeonOne.otf");
+			unicode-range: U+0020-007F;
+		}
+		
+		@font-face {
+			/* 时钟专用 */
+			font-family: "M";
+			src: url("../font/FuturaStd-Light.otf"); 
+			unicode-range: U+0020-007F;
+		}
+		@font-face {
+		  font-family: "H";
+		  src: url("../font/HYRunYuan-55S.ttf");
+		  unicode-range: U+4E00-9FFF;
+		}
+    </style>
+</head>
+<body>
+	<div class="bodyBg"></div>
+	<header class="header">
+	</header>
+	
+	<div class="maincontent">
+	<div class="headerdown">
+		<div class="breadcrumbs">	
+			<p><a href="../index.html" >主页</a> </p>
+			<p>> Recent News</p>
+		</div>
+		
+		<div class="contenttitle">
+			<p class="columnname">随游随想 专栏</p>
+			<p class="articletitle">秋假仙纳度/鳟鱼池塘之旅</p>
+			<p class="titlearrow">  </p>
+			
+		
+		<div class="contentAuthoranddate">
+			<p id="columnwelcome">
+欢迎阅读随游随想专栏。本专栏收录了我在旅途中所见所闻所想，往往就是想到哪写到哪，也不会做到详略得当。咱不是文学家，但会尽量保证用词正确，希望大伙也就是看一乐，就当是跟我聊天了，不要太过分纠结于语言。
+</p>
+			<br>
+			<p>作者: 开心的周天野</p>
+			<p>日期: &nbsp;&nbsp;&nbsp;&nbsp;2025/01/06</p>
+			<br>
+			<p>9529 字, 20 分钟</p>
+		</div>
+		</div>
+	
+	
+    <div id="app">
+	  
+
+    </div>
+	
+	
+	<footer class="footer">
+		
+	</footer>
+	<script>
+	   // 用 jQuery.load 动态加载，app相关的需要在RecentNewsNew中配置
+		// $('.head').load('./models/head_en.html');
+	   // $('.header').load('./models/header_en.html');
+			// console.log('Header 加载完成');
+			// $('#app').load('./models/RecentNews_en.html');
+			// console.log('Headerx 加载完成');
+	   // $('.footer').load('./models/footer_en.html');
+			
+	 </script>
+	<script>
+		definedurls =[
+					'../img/RecentNews photos/3-1.jpg',
+					'../img/RecentNews photos/3-2.jpg',
+					'../img/RecentNews photos/3-3.jpg',
+					'../img/RecentNews photos/3-4.jpg',
+					'../img/RecentNews photos/3-5.jpg',
+					'../img/RecentNews photos/3-6.jpg',
+					'../img/RecentNews photos/3-7.jpg',
+					'../img/RecentNews photos/3-8.jpg',
+					'../img/RecentNews photos/3-9.jpg',
+					'../img/RecentNews photos/3-10.jpg',
+					'../img/RecentNews photos/3-11.jpg'
+		];
+	</script>
+	
+    
+	<script>
+			var year=new Date().getFullYear();
+			$(".year").html(year);
+					
+				// 获取图片元素的顶部距离
+			var imageTop = document.getElementsByClassName("big").offsetTop;
+			window.scrollTo(0, 0);
+			window.onbeforeunload = function(){
+				window.scrollTo(0, 0);
+				document.documentElement.scrollTop = 0;  //ie下
+				document.body.scrollTop = 0;  //非ie	
+			 }
+
+	</script>
+	
+	
+	<script src="../js/RecentnewsNew.js"></script>
+</body>
+</html>

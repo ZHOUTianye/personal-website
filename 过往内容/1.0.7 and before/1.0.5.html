@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>debug page</title>
+		<link rel="stylesheet" href="L.css">
+		<!--  <script type="text/javascript" src="src="""></script> -->
+		<script type="text/javascript" >
+			
+			window.onload =function(){
+				var imglist=document.getElementById("imglist");
+				var imgArr =document.getElementsByTagName("img");
+				var same_Arr_for_count =document.getElementsByClassName("recent_imgs");
+				imglist.style.width=1510*imgArr.length+"px";
+				var navDiv= document.getElementById("navDiv");
+				var outer=document.getElementById("outer");
+				var dropdownlinksArr=document.getElementsByClassName("dropdownlinks");
+				console.log(dropdownlinksArr.length);
+				console.log(same_Arr_for_count.length);
+				
+				navDiv.style.left=(outer.offsetWidth -navDiv.offsetWidth)/2+"px";
+				
+				
+				/* 选中的图片索引为黑色*/
+				var oindex = dropdownlinksArr.length + same_Arr_for_count.length;  //后期修改：oindex代表前面的数量
+				var picindex=0; //后期修改：picindex初始值应该等于0
+				var position=0;
+		
+				var allA= document.getElementsByTagName("a");
+				
+				allA[oindex].style.backgroundColor="black";
+			
+			/*导航换图*/
+				for(var i=1 ; i<allA.length; i++){
+					
+					allA[i].num=i ;
+					allA[i].onclick=function(){   
+						/*onclick作为点击响应函数 不能将内置参数传递给外部 + 
+						js第一遍浏览页面时会忽略onclick而直接带着全局参数执行下面代码
+						若必须传递 只能把可能运行的其他操作放进去进而完成参数传递*/
+						oindex=this.num;
+						var picindex=oindex-14;
+						imglist.style.left=-1510*picindex+"px";
+						
+						for (var i=1;i<allA.length;i++){
+							allA[i].style.backgroundColor="";
+							console.log("hi "+picindex)
+							allA[picindex+14].style.backgroundColor="black";
+							
+						}
+						position=-1510*picindex;
+					
+					
+						/*move(imglist,"left",-1370*(index-11),10,function(){});*/
+					console.log(picindex,position);
+					for(var i=1 ; i<100; i++){
+						prev.onclick=function(){
+							console.log(picindex);
+							if (picindex==0){	
+								picindex=imgArr.length-1;
+								imglist.style.left=-3020+"px";
+							
+							}
+							else{
+								imglist.style.left=(1510-picindex*1510)+"px";
+								picindex--
+							}
+							console.log(picindex);
+							
+							for (var i=1;i<allA.length;i++){
+								allA[i].style.backgroundColor="";
+								console.log("hi "+picindex)
+								allA[picindex+14].style.backgroundColor="black";
+								
+							}
+					
+						}
+						next.onclick=function(){
+							console.log(picindex);
+							picindex++
+							
+							imglist.style.left=(-1510*picindex)+"px";
+							if (picindex>imgArr.length-1){
+								picindex=0;
+								imglist.style.left=0+"px";
+						
+							
+							
+							
+							}
+							console.log(picindex);
+							for (var i=1;i<allA.length;i++){
+								allA[i].style.backgroundColor="";
+								console.log("hi "+picindex)
+								allA[picindex+14].style.backgroundColor="black";
+								
+							}
+						}
+						
+						
+						}
+					}
+					
+					/*知道当前图片位置，将这个位置传递给轮播*/
+				}
+				var prev=document.getElementById("prev");
+				var next=document.getElementById("next");
+				
+				
+				
+				
+				
+				for(var i=1 ; i<100; i++){
+					prev.onclick=function(){
+						console.log(picindex);
+						if (picindex==0){	
+							picindex=imgArr.length-1;
+							imglist.style.left=-3020+"px";
+						
+						}
+						else{
+							imglist.style.left=(1510-picindex*1510)+"px";
+							picindex--
+						}
+						console.log(picindex);
+						
+						for (var i=1;i<allA.length;i++){
+							allA[i].style.backgroundColor="";
+							console.log("hi "+picindex)
+							allA[picindex+14].style.backgroundColor="black";
+							
+						}
+				
+					}
+					next.onclick=function(){
+						
+						picindex++
+						
+						imglist.style.left=(-1510*picindex)+"px";
+						if (picindex>imgArr.length-1){
+							picindex=0;
+							imglist.style.left=0+"px";
+					
+					
+						
+						
+						}
+						
+						for (var i=1;i<allA.length;i++){
+							allA[i].style.backgroundColor="";
+							allA[picindex+14].style.backgroundColor="black";
+							
+						}
+					}		
+					}
+				}
+
+		</script>
+		
+	</head>
+	<body>
+		<div id="headline">
+			<h1 id="myname">Debug page</h1>
+			<ul id="tags">	
+				<div class="dropdown">
+					<li>About me</li>
+					<div class="dropdown-content">
+						<a href="" id="secondline" class="dropdownlinks">Self introduction</a> 
+						<a href="" class="dropdownlinks">Secrets</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<li>Experiences</li>
+					<div class="dropdown-content">
+							<a href="" id="secondline" class="dropdownlinks">My Life Clock& Timeline</a> 
+							<a href="" class="dropdownlinks">Favorites</a> 
+							<a href="" class="dropdownlinks">Stories booklets</a> 
+							<a href="" id="secondline" class="dropdownlinks">Reviews and recommendations</a> 
+					</div>
+				</div>
+				<div class="dropdown">
+					<li>Moments</li>
+					<div class="dropdown-content">
+						<a href="" class="dropdownlinks">2023</a> 
+						<p>Coming soon</p>
+					</div>
+				</div>
+				<div class="dropdown">
+					<li>Quick Links</li>
+					<div class="dropdown-content">
+						<a href="" class="dropdownlinks">Contact info</a> 
+						<a href="" class="dropdownlinks">Message Board</a> 
+						<a href=""class="dropdownlinks">Website Data</a> 
+						<a href="" id="secondline" class="dropdownlinks">Download documents</a>
+					</div>
+				</div>
+				
+			</ul>
+		</div>
+		
+		<div id="container">
+			
+			<div id="headp">
+				
+		
+				<p>
+			
+				Welcome to Tianye's personal homepage! This website is for studying the HTML/CSS language only! <br>
+				This website is last edited on Jan 28,2023. The final version is 1.0.3 . <br>
+				As you can see, this website is under construction. 
+				Please wait me for a few days and I will provide you an amazing scanning experience! <br>
+				1.0.2 feature:<br>
+				STkaiti has already accepted by the code editer. <br>
+				Margin is added which is helpful for reading. <br>
+				Title decoration with colors. <br>
+				1.0.3 feature:<br>
+				Recent news imgs have added. Huge change!
+				
+				
+				</p>
+				
+			
+			</div>
+		</div>
+		
+		<div id="hr">
+			<hr color="mediumaquamarine" width="100%"  >
+		</div>
+		
+		
+			<div id="recent">
+				<br>
+				<!-- 图片轮播 -->
+				<div id="outer">
+					<ul id="imglist">
+						<li>
+							<img src="img/ac.png" class="recent_imgs">
+							<p id="dcnofimg"><a href="">Dean's list awarded! CGPA have risen for <font size="8" color="red">5</font>  consecutive semesters in CityU!
+							SGPA have reached 3.86 ranked <font size="8" color="red">#3</font> in SEE. <br><br> <u>Learn more...</u></a>	</p>
+							
+						</li>
+						<li>
+							<img src="img/ie.png" class="recent_imgs">
+							<p id="dcnofimg"><a href="">IELTS examination completed with <font size="8" color="red">6.5</font> with no section lower than <font size="8" color="red">6.0</font>!
+							 <br><br> <u>Learn more...</u></a>	</p>
+						</li>
+						<li>
+							<img src="img/3.png" class="recent_imgs">
+							<p id="dcnofimg"><a href="">The first personal website is developing NOW! <br> See you in May,2023! <br><br> <u>Learn more...</u></a>	</p>
+						</li>
+					</ul>
+					<div id="navDiv">
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</div>
+					<div id="LDiv">
+						<button id="prev">&lt&lt</button> 
+						</div>
+					<div id="RDiv">
+						<button id="next">&gt&gt</button> 
+					</div>
+				</div>
+				
+				
+				
+				
+		
+			</div>
+		<div id="container">
+			<div id="Selfintroduction">
+				<h2>
+					
+					Who am I?...
+				</h2>
+			
+				<p>
+					My full name is ZHOU Tianye.Generally people call me Tianye(Chinese given name),Sky(English name),or Floencio(Spanish name). <br>
+					I was born in Beijing in 2002. Currently,I am a undergraduate student majoring in Energy Science and Engineering at City University of Hong Kong. <br>
+					<br>
+					I do enjoy my colorful life, so no matter where am I, I would try to rethink whether I make reasonable use of time. Up to now, I have mastered the following skills by self-learning.
+					<br>
+					Language proficiency: Chinese Mandarin(Native speaker), English(IELTS:6.5), Spanish (A1)
+					<br>
+					General skills:PPT, word, excel, small motor vehicle driving, python 3, AutoCAD
+					<br>
+					Hobbies: playing badminton, running,hiking
+					<br><br>
+				</p>
+			
+		
+			<div id="usefullinks">
+				<h3>
+					Useful links
+				</h3>
+
+				
+		</div>
+		
+			<div id="copyright">
+				<p>
+				Copyright &copy; 2023 ZHOU Tianye All Rights Reserved.
+				</p>
+			</div>
+			
+			
+		</div>
+		
+	</body>
+</html>
+
+	<!-- style内联样式1000>
+				id选择器 100>
+				class选择器10>
+				div/p元素选择器1>
+				*整体选择器0
+				
+				 
+				 -->

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head id='head'>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=screen-width,initial-scale=1">
+		<title>踏入人生新阶段——匹兹堡见！</title>
+		<link rel="Shortcut Icon" href="../img/icon.ico">
+		<link rel="stylesheet" href="../css/swiper.css">
+		<link rel="stylesheet" href="../font/iconfont.css">
+		<link rel="stylesheet" href="../font/font v2/iconfont.css">
+		<link rel="stylesheet" href="../css/clock.css">
+		<link rel="stylesheet" type="text/css" href="../new.css">
+		<link rel="stylesheet" href="../css/hover.css">
+		<link rel="stylesheet" href="../css/content.css">
+		
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+		<script src="https://unpkg.com/vue@3"></script>
+		
+    <style>
+		@font-face {
+		  font-family: "E";
+		  /* src: url("font/FuturaStd-Light.otf"); */
+		  /* src: url("font/得意黑 斜体.ttf"); */
+		  src: url("../font/re2.otf");
+		  unicode-range: U+0020-007F;
+		}
+		@font-face {
+		  font-family: "C";
+		  /* src: url("font/FuturaStd-Light.otf"); */
+		  /* src: url("font/得意黑 斜体.ttf"); */
+		  src: url("../font/Tahu!.ttf");
+		  unicode-range: U+0020-007F;
+		}
+		@font-face {
+			font-family: "G";
+			/* src: url("font/FuturaStd-Light.otf"); */
+			/* src: url("font/得意黑 斜体.ttf"); */
+			src: url("../font/berling.ttf");
+			unicode-range: U+0020-007F;
+		}
+		@font-face {
+			/* learnmore专用 */
+			font-family: "L";
+			src: url("../font/NeonOne.otf");
+			unicode-range: U+0020-007F;
+		}
+		
+		@font-face {
+			/* 时钟专用 */
+			font-family: "M";
+			src: url("../font/FuturaStd-Light.otf"); 
+			unicode-range: U+0020-007F;
+		}
+		@font-face {
+		  font-family: "H";
+		  src: url("../font/HYRunYuan-55S.ttf");
+		  unicode-range: U+4E00-9FFF;
+		}
+    </style>
+</head>
+<body>
+	
+	<div class="bodyBg"></div>
+	
+	<header class="header">
+		
+		
+	</header>
+	<div class="maincontent">
+	<div class="headerdown">
+		<div class="breadcrumbs">	
+			<p><a href="../index.html" >主页</a> </p>
+			<p>> 近期活动</p>
+		</div>
+		<div class="contenttitle">
+			<p class="columnname"></p>
+			<p class="articletitle">踏入人生新阶段——匹兹堡见！</p>
+			<p class="titlearrow">  </p>
+			
+		
+		<div class="contentAuthoranddate">
+			<p id="columnwelcome"></p>
+			<p>作者: 幸运的周天野</p>
+			<p>日期: &nbsp;&nbsp;&nbsp;&nbsp;2024/04/01</p>
+			<br>
+			<p>3521 字, 10 分钟</p>
+		</div>
+		</div>
+	
+	
+    <div id="app">
+    </div>
+	
+	
+	<footer class="footer">
+		
+	</footer>
+	
+	 <script>
+	    // 用 jQuery.load 动态加载，app相关的需要在RecentNewsNew中配置
+		// $('.head').load('./models/head_en.html');
+	    // $('.header').load('./models/header_ch.html');
+		// console.log('Header 加载完成');
+		// $('#app').load('./models/RecentNews_en.html');
+		// console.log('Headerx 加载完成');
+	    // $('.footer').load('./models/footer_ch.html');
+		
+	  </script>
+	<script>	
+		definedurls =[];
+	</script>
+
+	
+	<script>
+			var year=new Date().getFullYear();
+			$(".year").html(year);
+					
+				// 获取图片元素的顶部距离
+			var imageTop = document.getElementsByClassName("big").offsetTop;
+			window.scrollTo(0, 0);
+			window.onbeforeunload = function(){
+				window.scrollTo(0, 0);
+				document.documentElement.scrollTop = 0;  //ie下
+				document.body.scrollTop = 0;  //非ie	
+			 }
+
+	</script>
+	<script src="../js/RecentnewsNew.js"></script>
+	
+	
+</body>
+</html>

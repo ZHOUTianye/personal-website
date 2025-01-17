@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Tianye's homepage</title> <!-- 网页标题 -->
+		<link rel="stylesheet" href="webpage_style.css"> <!-- css引入 -->
+		
+		<!--  <script type="text/javascript" src="src="""></script> -->
+		<script type="text/javascript" >// js引入 
+			
+			window.onload =function(){
+				var dropdownlinksArr=document.getElementsByClassName("dropdownlinks"); // 下拉菜单所有链接组成的数组 len=11 引入数组必须用class
+				var toolArr=document.getElementsByClassName("toollinks");// 其他链接组成的数组 len=3
+				var imglist=document.getElementById("imglist"); //轮播图多张图片一整块的区域（对应代码里的整个列表）
+				var imgArr =document.getElementsByTagName("img"); //网页内所有图片组成的数组 2023.2.1整改！！！ 原因：未来的图片也会被算入。
+				//建议不要使用getelementsbytagname 因为太不精确！
+				var recentimgArr =document.getElementsByClassName("recent_imgs");//轮播图内所有图片组成的数组  len=3
+				imglist.style.width=1510*imgArr.length+"px"; //一整块的区域的宽度：value=1510px*3=4530px
+				var navDiv= document.getElementById("navDiv");//图片下方导航按钮集合
+				var navDivArr= document.getElementsByClassName("navDivclass")
+				var outer=document.getElementById("outer");//提取轮播图背景：用于设置 图片下方导航按钮 的位置
+				
+				console.log(dropdownlinksArr.length);
+				console.log(recentimgArr.length);
+				console.log(toolArr.length);
+				navDiv.style.left=(outer.offsetWidth -navDiv.offsetWidth)/2+"px";//设置 图片下方导航按钮 的位置
+				
+				
+				/* 选中的图片索引为黑色*/
+				var DTRindex = dropdownlinksArr.length + toolArr.length+ recentimgArr.length;  //后期修改：oindex代表按钮前面a标签的数量 当前=12+3+5
+				var picindex=0; //初始轮播图片序号：图片序号固定为0 其后分别是1 2 
+				var position=0; //初始轮播图x轴位置：固定为0，其后分别是 -1510 -3020
+		
+				var allA= document.getElementsByTagName("a");//网页内所有链接组成的数组 用于设置 点击变成黑色 2023.1.30整改！！！原因 未来的a标签也会被算入
+				navDivArr[picindex].style.backgroundColor="black";
+				//allA[oindex]
+			/*导航换图*/
+				for(var i=1 ; i<allA.length; i++){
+					
+					allA[i].num=i ;
+					allA[i].onclick=function(){   
+						
+						/*onclick作为点击响应函数 不能将内置参数传递给外部 + 
+						js第一遍浏览页面时会忽略onclick而直接带着全局参数执行下面代码
+						若必须传递 只能把可能运行的其他操作放进去进而完成参数传递*/
+						oindex=this.num;
+						var picindex=oindex-DTRindex; //20-20
+						console.log("hii ")
+						imglist.style.left=-1510*picindex+"px"; //偏移函数：值为状态量（x轴的位置坐标 正：向右移动 负:向左移动）
+						
+						for (var i=0;i<navDivArr.length;i++){
+							navDivArr[i].style.backgroundColor="";
+							navDivArr[picindex].style.backgroundColor="black";
+							
+						}
+						position=-1510*picindex;
+					
+					
+						/*move(imglist,"left",-1370*(index-11),10,function(){});*/
+					console.log(picindex,position);
+					for(var i=1 ; i<100; i++){
+						prev.onclick=function(){
+							console.log(picindex);
+							if (picindex==0){	
+								picindex=imgArr.length-1;
+								imglist.style.left=-3020+"px";
+							
+							}
+							else{
+								imglist.style.left=(1510-picindex*1510)+"px";
+								picindex--
+							}
+							console.log(picindex);
+							
+							for (var i=0;i<navDivArr.length;i++){
+								navDivArr[i].style.backgroundColor="";
+								navDivArr[picindex].style.backgroundColor="black";
+								
+							}
+					
+						}
+						next.onclick=function(){
+							console.log(picindex);
+							picindex++
+							
+							imglist.style.left=(-1510*picindex)+"px";
+							if (picindex>imgArr.length-1){
+								picindex=0;
+								imglist.style.left=0+"px";
+						
+							
+							
+							
+							}
+							console.log(picindex);
+							for (var i=0;i<navDivArr.length;i++){
+								navDivArr[i].style.backgroundColor="";
+								navDivArr[picindex].style.backgroundColor="black";
+								
+							}
+						}
+						
+						
+						}
+					}
+					
+					/*知道当前图片位置，将这个位置传递给轮播*/
+				}
+				var prev=document.getElementById("prev");
+				var next=document.getElementById("next");
+	
+				
+				for(var i=1 ; i<100; i++){
+					prev.onclick=function(){
+						console.log(picindex);
+						if (picindex==0){	
+							picindex=imgArr.length-1;
+							imglist.style.left=-3020+"px";
+						
+						}
+						else{
+							imglist.style.left=(1510-picindex*1510)+"px";
+							picindex--
+						}
+						console.log(picindex);
+						
+						for (var i=0;i<navDivArr.length;i++){
+							navDivArr[i].style.backgroundColor="";
+							navDivArr[picindex].style.backgroundColor="black";
+							
+						}
+				
+					}
+					next.onclick=function(){
+						
+						picindex++
+						
+						imglist.style.left=(-1510*picindex)+"px";
+						if (picindex>imgArr.length-1){
+							picindex=0;
+							imglist.style.left=0+"px";
+					
+					
+						
+						
+						}
+						
+						for (var i=0;i<navDivArr.length;i++){
+							navDivArr[i].style.backgroundColor="";
+							navDivArr[picindex].style.backgroundColor="black";
+							
+						}
+					}
+					
+					
+					}
+					
+				
+				
+				}
+		</script>
+	</head>
+	<body>
+		<div id="headline">
+			<h1 id="myname">Tianye's homepage</h1>
+			<ul id="tags">	
+				<div class="dropdown">
+					<li>About me</li>
+					<div class="dropdown-content">
+						<a href="" class="dropdownlinks">Self introduction</a> 
+						<a href="" class="dropdownlinks">Secrets</a>
+						
+					</div>
+				</div>
+				<div class="dropdown">
+					<li>Experiences</li>
+					<div class="dropdown-content">
+							<a href="" class="dropdownlinks" id="secondline">My Life Clock& Timeline</a> 
+							<a href="" class="dropdownlinks">Favorites</a> 
+							<a href="" class="dropdownlinks">Stories booklets</a> 
+							<a href="" class="dropdownlinks" id="secondline">Reviews and recommendations</a> 
+					</div>
+				</div>
+				<div class="dropdown">
+					<li>Moments</li>
+					<div class="dropdown-content">
+						<a href="" class="dropdownlinks">2023</a> 
+						<a href="" class="dropdownlinks">2022</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<li>Quick Links</li>
+					<div class="dropdown-content">
+						<a href="" class="dropdownlinks">Contact info</a> 
+						<a href="" class="dropdownlinks">Message Board</a> 
+						<a href="" class="dropdownlinks">Website Data</a> 
+						<a href="" class="dropdownlinks" id="secondline">Download documents</a>
+					</div>
+				</div>
+				
+				
+			</ul>
+		</div>
+		<div id="toolbar">
+			<a href="" class="toollinks">Modest ver.</a>
+			<br>
+			<a href="" class="toollinks">简体中文</a>
+			<a href="" class="toollinks">繁體中文</a>
+			<a href="" class="toollinks">Espanol</a>
+			<a href="" class="toollinks">Japanese</a>
+		</div>
+		
+	
+		
+		<div id="hr">
+			<hr color="mediumaquamarine" width="100%"  >
+		</div>
+		
+		
+			<div id="recent">
+				<br>
+				<!-- 图片轮播 -->
+				<div id="outer">
+					<ul id="imglist">
+						<li>
+							<img src="img/ac.png" class= "recent_imgs">
+							<p id="dcnofimg"><a href="">Dean's list awarded! CGPA have risen for <font size="8" color="red">5</font>  consecutive semesters in CityU!
+							SGPA have reached 3.86 ranked <font size="8" color="red">#3</font> in SEE. <br><br> <u>Learn more...</u></a>	</p>
+							
+						</li>
+						<li>
+							<img src="img/ie.png" class= "recent_imgs">
+							<p id="dcnofimg"><a href="">IELTS examination completed with <font size="8" color="red">6.5</font> with no section lower than <font size="8" color="red">6.0</font>!
+							 <br><br> <u>Learn more...</u></a>	</p>
+						</li>
+						<li>
+							<img src="img/3.png" class= "recent_imgs">
+							<p id="dcnofimg"><a href="">The first personal website is developing NOW! <br> See you in May,2023! <br><br> <u>Learn more...</u></a>	</p>
+						</li>
+					</ul>
+					<div id="navDiv">
+						<a href="javascript:;" class="navDivclass"></a>
+						<a href="javascript:;" class="navDivclass"></a>
+						<a href="javascript:;" class="navDivclass"></a>
+					</div>
+					<div id="LDiv">
+						<button id="prev">&lt</button> 
+						</div>
+					<div id="RDiv">
+						<button id="next">&gt</button> 
+					</div>
+				</div>
+				
+				
+				
+				
+		
+			</div>
+		<div id="container">
+			<div id="Selfintroduction">
+				<h2>
+					
+					Who am I?...
+				</h2>
+			
+				<p>
+					My full name is ZHOU Tianye.Generally people call me Tianye(Chinese given name),Sky(English name),or Floencio(Spanish name). <br>
+					I was born in Beijing in 2002. Currently,I am a undergraduate student majoring in Energy Science and Engineering at City University of Hong Kong. <br>
+					<br>
+					I do enjoy my colorful life, so no matter where am I, I would try to rethink whether I make reasonable use of time. Up to now, I have mastered the following skills by self-learning.
+					<br>
+					Language proficiency: Chinese Mandarin(Native speaker), English(IELTS:6.5), Spanish (A1)
+					<br>
+					General skills:PPT, word, excel, small motor vehicle driving, python 3, AutoCAD
+					<br>
+					Hobbies: playing badminton, running,hiking
+					<br><br>
+				</p>
+			
+		
+			<div id="usefullinks">
+				<h3>
+					Useful links
+				</h3>
+
+			<div id="container">
+				
+				<div id="headp">
+					
+			
+					<p>
+				
+					Welcome to Tianye's personal homepage! This website is for studying the HTML/CSS language only! <br>
+					This website is last edited on Jan 29,2023. The final version is 1.0.4 . <br>
+					As you can see, this website is under construction. 
+					Please wait me for a few days and I will provide you an amazing scanning experience! <br>
+					1.0.2 feature:<br>
+					STkaiti has already accepted by the code editer. <br>
+					Margin is added which is helpful for reading. <br>
+					Title decoration with colors. <br>
+					1.0.3 feature:<br>
+					Recent news imgs and descriptions have been added. <br>
+					Buttons can be used for switching imgs. <br>
+					Bugs fixes <br>
+					1.0.4 feature: <br>
+					Recent news-imgs can be switched by using turning button <br>
+					Codes are more generalized for adding more pictures.<br>
+					Bugs fixes <br>
+					1.0.5 feature: <br>
+					Beautify the navagation block and modify the background to a more obvious contrast color.
+					Codes are more generalized for adding more links before Recent news section. 
+					Next: <br>
+					Codes are more generalized for . 
+					Delete useless codes and Too-general and let codes more easier to adjust.
+					
+					
+					
+					</p>
+					
+				
+				</div>
+			</div>
+		</div>
+		
+			<div id="copyright">
+				<p>
+				Copyright &copy; 2023 ZHOU Tianye All Rights Reserved.
+				</p>
+			</div>
+			
+			
+		</div>
+		
+		
+	</body>
+</html>
+
+	<!-- style内联样式1000>
+				id选择器 100>
+				class选择器10>
+				div/p元素选择器1>
+				*整体选择器0
+				
+				 
+				 -->
